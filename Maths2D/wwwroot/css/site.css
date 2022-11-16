@@ -1,0 +1,104 @@
+/*===== GOOGLE FONTS =====*/
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;500;600;700&display=swap");
+
+/*--first-color: #9080F2;
+--first-color-dark: #705CF2;
+--first-color-darken: #614BF2;
+--text-color: #614BF2;
+--first-color-light: #ADA2F2;
+--first-color-lighten: #F2F2F2;*/
+
+:root {
+    --bs-link-color: #614BF2;
+    --bs-link-hover-color: #ADA2F2;
+}
+
+body {
+    min-height: 100vh;
+    font-family: Ubuntu, sans-serif;
+}
+
+main {
+    height: 100vh;
+    max-height: 100vh;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.dropdown-toggle {
+    outline: 0;
+}
+
+.btn-toggle {
+    padding: .25rem .5rem;
+    font-weight: 600;
+    color: rgba(0, 0, 0, .65);
+    background-color: transparent;
+}
+
+    .btn-toggle:hover,
+    .btn-toggle:focus {
+        color: rgba(0, 0, 0, .85);
+        background-color: #CEADFA;
+    }
+
+    .btn-toggle::before {
+        width: 1.25em;
+        line-height: 0;
+        content: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='rgba%280,0,0,.5%29' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M5 14l6-6-6-6'/%3e%3c/svg%3e");
+        transition: transform .35s ease;
+        transform-origin: .5em 50%;
+    }
+
+    .btn-toggle[aria-expanded="true"] {
+        color: rgba(0, 0, 0, .85);
+    }
+
+        .btn-toggle[aria-expanded="true"]::before {
+            transform: rotate(90deg);
+        }
+
+.btn-toggle-nav a {
+    padding: .1875rem .5rem;
+    margin-top: .125rem;
+    margin-left: 1.25rem;
+}
+
+    .btn-toggle-nav a:hover,
+    .btn-toggle-nav a:focus {
+        background-color: #CEADFA;
+    }
+
+.scrollarea {
+    overflow-y: auto;
+}
+
+.wrapper {
+    display: flex;
+    width: 100%;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: 0;
+    border-top: 1px solid rgb(128, 128, 128);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #614BF2;
+    --bs-btn-border-color: #614BF2;
+    --bs-btn-hover-bg: #614BF2;
+    --bs-btn-hover-border-color: #614BF2;
+    --bs-btn-active-bg: #CEADFA;
+    --bs-btn-active-border-color: #CEADFA;
+}
+
+.btn-primary {
+    --bs-btn-bg: #614BF2;
+    --bs-btn-border-color: #614BF2;
+    --bs-btn-hover-bg: #ADA2F2;
+    --bs-btn-hover-border-color: #ADA2F2;
+    --bs-btn-active-bg: #CEADFA;
+    --bs-btn-active-border-color: #CEADFA;
+}

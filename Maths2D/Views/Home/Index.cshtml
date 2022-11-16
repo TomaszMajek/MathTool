@@ -1,0 +1,40 @@
+﻿@model IEnumerable<Maths2D.Data.Post>
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="p-5">
+    <div class="row">
+        <div class="col-md-auto">
+            <span class="material-symbols-outlined" style="font-size:48px;">public</span>
+        </div>
+        <div class="col-md-10">
+            <h1>News</h1>
+        </div>
+        <div class="col-md-1 position-relative">
+            <a asp-action="Create" 
+                class="material-symbols-outlined position-absolute top-50 start-50 translate-middle" 
+                style="text-decoration: none; font-size: 36px;">add_circle</a>
+        </div>
+    </div>
+    <hr />
+
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        @foreach (var item in Model)
+        {
+            <div class="col">
+                <div class="card h-100" style="width: 18rem;">
+                    <img src="#" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">@Html.DisplayFor(modelItem => item.Title)</h5>
+                        <p class="card-text">@Html.DisplayFor(modelItem => item.Description)</p>
+                        <a href="#" class="btn btn-primary">Read more</a>
+                    </div>
+                    <div class="card-footer">
+                        <small class="text-muted">Posted @Html.DisplayFor(modelItem => item.Created)</small>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
